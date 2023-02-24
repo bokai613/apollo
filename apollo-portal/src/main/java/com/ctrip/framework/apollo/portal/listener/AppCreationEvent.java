@@ -24,10 +24,12 @@ import org.springframework.context.ApplicationEvent;
 
 public class AppCreationEvent extends ApplicationEvent {
 
+  // 构造方法，将 App 对象作为方法参数传入。
   public AppCreationEvent(Object source) {
     super(source);
   }
 
+  // #getApp() 方法，获得事件对应的 App 对象。
   public App getApp() {
     Preconditions.checkState(source != null);
     return (App) this.source;
